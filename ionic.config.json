@@ -1,0 +1,7 @@
+{
+  "name": "asgard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
