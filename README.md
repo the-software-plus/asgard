@@ -3,23 +3,19 @@
 
 ## Tecnologias Utilizadas  
 - Ionic 7
+- Capacitor
 - Angular
-- Typescript  
----
+- Typescript
 
 ## Protótipo no Figma  
 🔗 [Acesse o protótipo aqui](https://www.figma.com/design/0V0tEjElhEkmL7PEeEet0f/app-diagnostico-planta?t=4B8cG9iOWqphRnw5-1)
-
----
 
 ## Funcionalidades  
 
 ✅ **Captura de imagens em tempo real** usando a câmera do dispositivo  
 ✅ **Envio das imagens para o AWS S3**  
 ✅ **Autenticação e gerenciamento de usuários** via API Spring Boot  
-✅ **Exibição de histórico de diagnósticos**  
-
----
+✅ **Exibição de histórico de diagnósticos**
 
 ## Como Rodar o Projeto  
 
