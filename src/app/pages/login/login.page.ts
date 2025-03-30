@@ -18,13 +18,14 @@ import { of } from 'rxjs';
 export class LoginPage {
   email = '';
   password = '';
+  showPassword = false;
 
   constructor(
     private authService: AuthService,
     private router: Router,
     private alertController: AlertController,
     private loadingController: LoadingController
-  ) {}
+  ) { }
 
   async login() {
     const loading = await this.loadingController.create({
@@ -47,5 +48,17 @@ export class LoginPage {
         await alert.present();
       },
     });
+  }
+
+  togglePassword() {
+    this.showPassword = !this.showPassword;
+  }
+
+  goToSignup() {
+    console.log('Navegar para cadastro');
+  }
+
+  forgotPassword() {
+    console.log('Navegar para recuperação de senha');
   }
 }
