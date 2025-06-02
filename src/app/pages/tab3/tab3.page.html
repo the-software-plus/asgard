@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Meu perfil
+      Meu Perfil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding profile-content">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Meu Perfil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Terceira página"></app-explore-container>
+  <div class="user-info ion-text-center">
+    <ion-icon name="person-circle-outline" class="user-icon" color="medium"></ion-icon>
+    <h2 class="user-name">{{ userName }}</h2>
+    <p class="user-email">{{ userEmail }}</p>
+  </div>
+
+  <div class="logout-section">
+    <ion-button expand="block" color="danger" (click)="logout()">
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      Sair
+    </ion-button>
+  </div>
+
 </ion-content>
