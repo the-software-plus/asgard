@@ -1,64 +1,34 @@
-.camera-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 100%;
+    max-height: 400px; // Ajuste conforme necessário
+    border-radius: 8px;
+    border: 1px solid var(--ion-color-medium-tint);
+    object-fit: contain; // ou 'cover' dependendo do efeito desejado
   }
-  
-  /* Preview ocupa metade da tela */
-  .camera-preview {
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    background: #000;
-    flex-shrink: 0;
+}
+
+.diagnosis-result {
+  ion-card-title {
+    font-size: 1.2em;
   }
-  
-  /* Mini-galeria abaixo do preview */
-  .mini-gallery {
-    display: flex;
-    overflow-x: auto;
-    padding: 8px;
-    background: rgba(255, 255, 255, 0.9);
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 8px;
+    }
   }
-  
-  /* Thumb da mini-galeria */
-  .thumb {
-    position: relative;
-    flex: 0 0 auto;
-    width: 64px;
-    height: 64px;
-    margin-right: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  /* Numeração sobre a thumb */
-  .thumb-index {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-    z-index: 10;
-  }
-  
-  /* Container das imagens no grid completo */
-  .thumb-full {
-    position: relative;
-    width: 100%;
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  /* Grid completo de fotos */
-  .full-gallery {
-    margin-top: 8px;
-  }
-  
+}
+
+// Para garantir que o conteúdo não fique atrás do header/footer em fullscreen
+ion-content.ion-padding {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
