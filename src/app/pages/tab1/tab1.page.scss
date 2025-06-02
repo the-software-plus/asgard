@@ -1,0 +1,152 @@
+.latest-analysis-section {
+  margin-bottom: 24px;
+  ion-card {
+    box-shadow: var(--ion-box-shadow, 0 4px 12px rgba(0,0,0,0.08));
+  }
+  .analysis-image-preview {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--ion-color-step-150, #f0f0f0);
+    padding-bottom: 12px;
+  }
+  .analysis-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 16px; // Aumenta o espaço antes dos botões
+  }
+  ion-button {
+    margin-top: 10px; // Espaçamento uniforme entre botões
+    &:first-of-type {
+      margin-top: 0; // Remove margem do primeiro botão se for o de salvar
+    }
+  }
+}
+
+.saved-analyses-gallery {
+  .section-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--ion-color-dark-tint);
+    margin-bottom: 8px;
+  }
+  .empty-gallery-message {
+    color: var(--ion-color-medium-shade);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    ion-icon {
+      font-size: 3.5em;
+      margin-bottom: 0.3em;
+    }
+    p {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+  }
+  ion-list[inset] {
+    border-radius: 12px; // Bordas arredondadas para a lista
+    overflow: hidden; // Para o border-radius funcionar com os itens
+  }
+  ion-item {
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    ion-thumbnail {
+      --size: 60px;
+      --border-radius: 8px;
+      margin-right: 12px;
+      img {
+        object-fit: cover;
+      }
+    }
+    ion-label {
+      h2 {
+        font-weight: bold;
+        font-size: 1.05em;
+        margin-bottom: 4px;
+        color: var(--ion-color-dark-tint);
+      }
+      .description-snippet {
+        font-size: 0.85em;
+        color: var(--ion-color-medium-shade);
+        white-space: normal;
+        -webkit-line-clamp: 2; /* Limita a 2 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        margin-bottom: 4px;
+      }
+      small {
+        font-size: 0.75em;
+        color: var(--ion-color-step-600, #777);
+      }
+    }
+  }
+  ion-item-option { // Para o botão de excluir
+    font-size: 0.9em; // Ajusta o tamanho da fonte do texto no botão, se houver
+  }
+}
+
+.analysis-details-modal {
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    --color: var(--ion-color-primary-contrast);
+    ion-button { // Estilo para o botão fechar no modal
+        --color: var(--ion-color-primary-contrast);
+    }
+  }
+  .analysis-image-modal {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .detail-section {
+    margin-bottom: 20px;
+    h3 {
+      font-size: 1.15em;
+      font-weight: 600;
+      color: var(--ion-color-dark);
+      border-bottom: 1px solid var(--ion-color-step-200, #e0e0e0);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      ion-icon {
+        margin-right: 10px;
+        font-size: 1.4em;
+        // Cores específicas já são dadas no HTML, mas pode ter um padrão aqui
+      }
+    }
+    p, li {
+      font-size: 1em;
+      line-height: 1.65;
+      color: var(--ion-color-text); // Cor de texto padrão
+    }
+    ul {
+      padding-left: 25px;
+      list-style-type: none; // Remover marcadores padrão se quiser customizar
+      li {
+        margin-bottom: 8px;
+        position: relative;
+        // Adicionar um marcador customizado se desejar
+        // &::before {
+        //   content: '✓';
+        //   color: var(--ion-color-success);
+        //   position: absolute;
+        //   left: -20px;
+        // }
+      }
+    }
+  }
+}
+
+// Classe de Toast Customizada (opcional, se você definir cssClass no presentToast)
+.custom-toast {
+  // --background: var(--ion-color-primary);
+  // --color: var(--ion-color-primary-contrast);
+  // text-align: center;
+}
